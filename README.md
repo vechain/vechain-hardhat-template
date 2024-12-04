@@ -86,3 +86,7 @@ yarn generate-docs
 ```
 
 Will generate the docs in the `docs` folder.
+
+## Warning
+
+This template is using the `@openzeppelin/contracts-upgradeable` `v5.0.2` and `@openzeppelin/contracts` `v5.0.2` in order to be compatible with the VeChain Solidity compiler version of `0.8.20`.
