@@ -38,9 +38,8 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": ">=9.1.0",
     "@vechain/hardhat-ethers": "^0.1.9",
-    "@vechain/hardhat-vechain": "^0.1.9",
-    "@vechain/sdk-core": "1.0.0-beta.31",
-    "@vechain/sdk-network": "1.0.0-beta.31",
+    "@vechain/sdk-core": "1.0.0-rc.4",
+    "@vechain/sdk-hardhat-plugin": "1.0.0-rc.4",
     "@vechain/web3-providers-connex": "^1.1.2",
     "chai": "^4.2.0",
     "dayjs": "^1.11.10",
@@ -62,7 +61,6 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-verify": "^1.1.1",
     "@typechain/ethers-v6": "^0.4.3",
-    "@vechain/sdk-hardhat-plugin": "^1.0.0-beta.12",
     "ethers": "^6.7.1",
     "ganache-cli": "^6.12.2",
     "hardhat": "^2.19.1"

@@ -1,4 +1,3 @@
-// @ts-ignore ethers from hardhat warning
 import { ethers } from "hardhat";
 import { expect } from "chai";
 import { getOrDeployContractInstances } from "../scripts/helpers";

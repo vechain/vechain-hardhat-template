@@ -1,4 +1,3 @@
-// @ts-ignore ethers from hardhat warning
 import { ethers } from "hardhat";
 import { SimpleStorage } from "../../typechain-types";
 

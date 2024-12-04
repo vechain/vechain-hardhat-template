@@ -1,5 +1,4 @@
-// @ts-ignore
-import { network, ethers } from "hardhat";
+import { network } from "hardhat";
 import { HttpNetworkConfig } from "hardhat/types";
 import { getOrDeployContractInstances } from "../helpers";
 

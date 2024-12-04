@@ -1,8 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-truffle5";
-import "@vechain/hardhat-vechain";
-import "@vechain/hardhat-ethers";
+import "@vechain/sdk-hardhat-plugin";
 import "hardhat-contract-sizer";
 import "hardhat-ignore-warnings";
 import "solidity-coverage";
@@ -11,9 +10,7 @@ import "hardhat-interface-generator";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-const config: HardhatUserConfig = {
-  solidity: "0.8.20",
-};
+const VECHAIN_DERIVATION_PATH = "m/44'/818'/0'/0";
 
 const getEnvMnemonic = () => {
   const mnemonic = process.env.MNEMONIC;
@@ -21,16 +18,20 @@ const getEnvMnemonic = () => {
   return mnemonic ?? "";
 };
 
-module.exports = {
+const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.20",
-    evmVersion: "paris",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 1000000,
+    compilers: [
+      {
+        version: "0.8.20",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+          evmVersion: "paris",
+        },
       },
-    },
+    ],
   },
   contractSizer: {
     alphaSort: true,
@@ -54,9 +55,8 @@ module.exports = {
       accounts: {
         mnemonic: getEnvMnemonic(),
         count: 20,
-        path: "m/44'/818'/0'/0",
+        path: VECHAIN_DERIVATION_PATH,
       },
-      restful: true,
       gas: 10000000,
     },
     vechain_testnet: {
@@ -64,9 +64,8 @@ module.exports = {
       accounts: {
         mnemonic: getEnvMnemonic(),
         count: 20,
-        path: "m/44'/818'/0'/0",
+        path: VECHAIN_DERIVATION_PATH,
       },
-      restful: true,
       gas: 10000000,
     },
     vechain_mainnet: {
@@ -74,9 +73,8 @@ module.exports = {
       accounts: {
         mnemonic: getEnvMnemonic(),
         count: 20,
-        path: "m/44'/818'/0'/0",
+        path: VECHAIN_DERIVATION_PATH,
       },
-      restful: true,
       gas: 10000000,
     },
   },
