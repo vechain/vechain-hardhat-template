@@ -25,3 +25,5 @@ yarn-error.log*
 
 .nvmrc
 coverage.json
+
+.DS_Store
