@@ -7,6 +7,7 @@ import "hardhat-ignore-warnings";
 import "solidity-coverage";
 import "solidity-docgen";
 import "hardhat-interface-generator";
+import "@nomicfoundation/hardhat-verify";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -61,6 +62,7 @@ const config: HardhatUserConfig = {
     },
     vechain_testnet: {
       url: "https://testnet.vechain.org",
+      chainId: 100010,
       accounts: {
         mnemonic: getEnvMnemonic(),
         count: 20,
@@ -70,6 +72,7 @@ const config: HardhatUserConfig = {
     },
     vechain_mainnet: {
       url: "https://mainnet.vechain.org",
+      chainId: 100009,
       accounts: {
         mnemonic: getEnvMnemonic(),
         count: 20,
@@ -81,6 +84,11 @@ const config: HardhatUserConfig = {
   docgen: {
     pages: "files",
   },
+  sourcify: {
+    enabled: true,
+    apiUrl: "https://sourcify.dev/server",
+    browserUrl: "https://repo.sourcify.dev",
+  }
 };
 
 export default config;

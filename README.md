@@ -65,6 +65,24 @@ or
 yarn deploy:mainnet
 ```
 
+### Verify (Optional)
+
+Optionally verify your smart contracts on Sourcify. This allows 3rd to view and independently verify all of the following:
+
+- Source code
+- Metadata
+- Contract ABI
+- Contract Bytecode
+- Contract transaction ID
+
+After deploying `SimpleStorage`, the console will print the address of the deployed contract. You can verify the contract on [sourcify.eth](https://repo.sourcify.dev/select-contract/):
+
+```bash
+yarn hardhat verify --network vechain_testnet 0x98307db87474fc30d6e022e2b31f384b134c2c2a
+```
+
+**Note:** Hardhat throws an error when verifying contracts on VeChain networks. This error can be ignored as the contract is still verified on Sourcify. See an [example here](https://repo.sourcify.dev/contracts/full_match/100010/0x98307db87474fC30D6E022E2b31f384B134C2c2A/sources/contracts/)
+
 ### Test
 
 ```bash
