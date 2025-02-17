@@ -67,6 +67,14 @@ yarn deploy:mainnet
 
 ### Verify (Optional)
 
+Optionally verify your smart contracts on Sourcify. This allows 3rd to view and independently verify all of the following:
+
+- Source code
+- Metadata
+- Contract ABI
+- Contract Bytecode
+- Contract transaction ID
+
 After deploying `SimpleStorage`, the console will print the address of the deployed contract. You can verify the contract on [sourcify.eth](https://repo.sourcify.dev/select-contract/):
 
 ```bash
