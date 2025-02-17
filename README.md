@@ -67,7 +67,7 @@ yarn deploy:mainnet
 
 ### Verify (Optional)
 
-After deploying `SimpleStorage`, the console will print the address of the deployed contract. You can veriqfy the contract [sourcify.eth](https://repo.sourcify.dev/select-contract/):
+After deploying `SimpleStorage`, the console will print the address of the deployed contract. You can verify the contract on [sourcify.eth](https://repo.sourcify.dev/select-contract/):
 
 ```bash
 yarn hardhat verify --network vechain_testnet 0x98307db87474fc30d6e022e2b31f384b134c2c2a
