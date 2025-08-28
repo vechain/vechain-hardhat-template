@@ -66,5 +66,11 @@
     "ethers": "^6.7.1",
     "ganache-cli": "^6.12.2",
     "hardhat": "^2.19.1"
+  },
+  "resolutions": {
+    "@ethersproject/signing-key": "5.8.0",
+    "thor-devkit": "2.1.0",
+    "ethers": "5.8.0",
+    "elliptic": "6.6.1"
   }
 }
