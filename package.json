@@ -71,6 +71,7 @@
     "@ethersproject/signing-key": "5.8.0",
     "thor-devkit": "2.1.0",
     "ethers": "5.8.0",
-    "elliptic": "6.6.1"
+    "elliptic": "6.6.1",
+    "adm-zip": "0.5.2"
   }
 }
